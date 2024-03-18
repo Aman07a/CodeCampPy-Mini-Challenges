@@ -1,18 +1,20 @@
+import math
+
 # String data type
 
 # Literal assignment
 first = "Elon"
 last = "Musk"
 
-print(type(first))
-print(type(first) == str)
-print(isinstance(first, str))
+# print(type(first))
+# print(type(first) == str)
+# print(isinstance(first, str))
 
 # Constructor function
-pizza = str("Pepperoni")
-print(type(pizza))
-print(type(pizza) == str)
-print(isinstance(pizza, str))
+# pizza = str("Pepperoni")
+# print(type(pizza))
+# print(type(pizza) == str)
+# print(isinstance(pizza, str))
 
 # Concatenation
 fullname = first + " " + last
@@ -30,19 +32,21 @@ statement = "I like rock music from the " + decade + "s."
 print(statement)
 
 # Multiple lines
-multiline = '''
+multiline = """
 Hey, how are you?
 
 I was just checking in.
-All good?
-'''
+                                All good?
+                                
+"""
 print(multiline)
 
 # Escaping special characters
-sentence = 'I\'m at work!\tHey!\n\nWhere\'s this at\\located?'
+sentence = "I'm at work!\tHey!\n\nWhere's this at\\located?"
 print(sentence)
 
 # String Methods
+
 print(first)
 print(first.lower())
 print(first.upper())
@@ -56,3 +60,66 @@ print(len(multiline))
 multiline += ""
 multiline = "" + multiline
 print(len(multiline))
+
+print(len(multiline.strip()))
+print(len(multiline.strip()))
+print(len(multiline.strip()))
+
+print("")
+
+# Build a menu
+title = "menu".upper()
+print(title.center(20, "="))
+print("Coffee".ljust(16, ".") + "$4".rjust(4))
+print("Muffin".ljust(16, ".") + "$4".rjust(4))
+print("Cheesecake".ljust(16, ".") + "$4".rjust(4))
+
+print("")
+
+# String index values
+print(first[1])
+print(first[-1])
+print(first[1:-1])
+print(first[1:])
+
+# Some methods return boolean data
+print(first.startswith("D"))
+print(first.endswith("Z"))
+
+# Boolean data type
+myvalue = True
+x = bool(False)
+print(type(x))
+print(isinstance(myvalue, int))
+
+# Numeric data types
+
+# integer type
+price = 100
+best_price = int(80)
+print(type(price))
+print(isinstance(best_price, int))
+
+# float type
+gpa = 3.28
+y = float(1.14)
+print(type(gpa))
+
+# complex type
+comp_value = 5 + 3j
+print(type(comp_value))
+print(comp_value.real)
+print(comp_value.imag)
+
+# Built-in functions for numbers
+
+print(abs(gpa))
+print(abs(gpa * -1))
+
+print(round(gpa))
+print(round(gpa, 1))
+
+print(math.pi)
+print(math.sqrt(64))
+print(math.ceil(gpa))
+print(math.floor(gpa))
